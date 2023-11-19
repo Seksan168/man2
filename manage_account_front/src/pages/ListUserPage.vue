@@ -231,7 +231,7 @@ export default defineComponent({
         "x-access-token": this.storeLogUser.accessToken,
       };
       this.$api
-        .delete("/auth/" + this.input.id, { headers })
+        .delete("/auth/" + this.input.id +"/1/1", { headers })
         .then((res) => {
           if (res.status == 200) {
             Notify.create({
